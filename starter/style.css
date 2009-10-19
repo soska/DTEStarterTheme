@@ -1,0 +1,649 @@
+/*
+Theme Name: Duperrific Starter
+Theme URI: http://duperrific.com/dte
+Version: 1.0
+Description: Demo theme for Duperrific Theme Engine.
+Author: Armando Sosa
+Author URI: http://www.duperrific.com
+*/
+
+*{
+	margin:0;
+	padding:0;
+}
+
+body{
+	font-family:"lucida grande", "trebuchet ms", arial, verdana, sans-serif; 
+	font-size:76%;
+	line-height:1.5em;
+	text-align:center;
+	background:#555;   
+	color:#454545;
+} 
+
+a{
+	color:#069;
+	text-decoration:none;
+}             
+
+a:hover{
+	color:#900;
+}      
+         
+a img{
+	border:none;
+}    
+
+h2,h3,h4{
+	font-weight:normal;
+}
+
+/* Navigation
+---------------------------------------- */
+.navigation{
+	height:30px;
+	line-height:30px;
+	background:#eee;
+	border-top:1px solid #ddd;           
+	border-bottom:1px solid #ddd;	
+}
+.navigation li{
+	display:block;
+	float:left;
+}
+.navigation li a{  
+	color:#666;
+	display:block;
+	float:left;
+	padding:0 12px;
+	background:#eee;
+	border-bottom:1px solid #ddd;
+	border-right:1px solid #ddd;
+}                        
+
+.navigation li a:hover{
+	background:#fff;
+	border-bottom:1px solid #fff;	
+}
+ 
+/* Layout
+---------------------------------------- */
+
+#container{
+	width:960px;   
+	margin:20px auto;
+	text-align:left;
+	background:#fff;
+	padding-top:40px;
+	position:relative;
+}                           
+
+#header{
+	position:relative;
+	height:100px;
+}             
+
+#blog-title{ 
+	font-size:24px; 
+	line-height:33px;	
+	position:absolute;
+	top:20px;
+	left:20px;
+} 
+
+#blog-title a{
+	color:#900;
+}  
+
+#blog-description{
+	color:#888;
+	font-size:14px;
+	line-height:21px;
+	position:absolute;
+	top:50px;
+	left:20px;
+}
+     
+#pages-menu{
+	position:absolute;
+	width:100%;
+	top:0;
+	left:0;
+}     
+
+#pages-menu .current_page_item a{
+	background:#fff;
+	border-bottom:1px solid #fff;
+}
+
+#cats-menu{
+	height:36px;
+	line-height:36px;
+	font-size:1.1em;
+}
+
+#cats-menu .current-cat a{
+	background:#fff;
+	border-bottom:1px solid #fff;
+}
+
+
+#content{
+	width:600px;
+	padding:20px;
+}
+
+#sidebar{
+	width:300px;
+	position:absolute;
+	right:10px;
+	top:178px;
+}   
+
+#footer{
+	padding:0 20px;
+	height:40px;
+	line-height:40px;
+	background:#e0e0e0;
+	border-top:1px solid #ccc;
+}      
+
+/* Misc
+---------------------------------------- */
+.top-page-title{   
+	font-weight:normal;
+	text-transform:uppercase;
+	font-size:16px;
+	line-height:18px;
+	margin-left:10px;
+	color:#888;	
+}    
+
+/* Entries
+---------------------------------------- */     
+.post{
+	position:relative;
+	padding:20px 40px;
+	margin-bottom:20px;
+	border-bottom:1px solid #eee;
+}
+                                                
+div.entry-date{
+	position:absolute;
+	left:0;
+	top:20px;
+	width:33px;  
+	text-align:center;
+/*	border:1px solid #eee;*/
+	font-size:10px;
+	color:#999;
+}              
+
+div.entry-date span{
+	display:block;   
+	border-bottom:1px solid #eee;
+}               
+
+div.entry-date span.day{
+	font-size:14px;
+}  
+
+.entry-title{
+	font-size:22px;
+	line-height:27px;
+	margin-bottom:18px;
+}
+
+.hentry h3{
+	font-size:18px;
+	margin-bottom:12px;
+}   
+
+.hentry p{
+	margin-bottom:18px;
+}
+
+.entry-utility{
+	font-size:11px;
+	line-height:24px; 
+	padding:0 12px;
+	background:#f0f0f0;
+	border:1px solid #eee;
+}
+
+.entry-author{
+	font-size:12px;
+	line-height:12px;
+	font-weight:bold;
+}    
+
+.entry-comments-link{
+	padding-left:20px;
+}
+
+
+.hentry blockquote{
+	padding: 10px;
+	margin: 10px 10px 20px 10px;
+	background: #efefef; 
+	border-left:1px solid #ddd;
+}
+
+.hentry blockquote blockquote{
+	background:#f6f6f6;
+}
+
+.hentry dt {
+	float: left;
+	clear: left;
+	line-height: 24px;
+	width: 9em;
+	text-align:right;
+}
+
+.hentry dd {
+	clear: right;
+	padding: 4px 0 4px 9.5em;
+}
+
+.more-link{
+	font-size:12px;
+	display:block;
+	text-align:right;
+}
+    
+/* Images
+---------------------------------------- */
+.entry-content img {
+    margin: 0 0 18px 0;
+    max-width:100%;
+}
+.alignleft,
+img.alignleft {
+	float: left;
+    margin-right:20px;
+}
+.alignright,
+img.alignright {
+	display: block;
+	float: right;
+    margin-left:20px;
+}
+.aligncenter,
+img.aligncenter {
+	margin-left:auto;
+	margin-right:auto;
+	display: block;
+	clear: both;
+}
+.wp-caption {
+	text-align: center;
+	margin-bottom:18px;
+}
+.wp-caption img {
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+}
+.wp-caption p.wp-caption-text {
+	margin: 0;
+	padding:5px;
+}
+.gallery img {
+    margin:0;
+}
+.wp-smiley { /* Prevent the smileys from breaking line-height */
+	max-height:12px;
+	margin:0 !important;
+}
+
+
+/* Widgets
+---------------------------------------- */
+                       
+.widget-container{
+	margin-bottom:10px;
+	padding:10px;
+	border:1px solid #ddd;
+}
+
+.widget-title{
+	font-size:14px;
+	color:#999;
+}
+
+/**
+ * @section        #Sidebar
+ *
+ * Style for the widgets ON the sidebar
+ *
+ */
+
+#sidebar{
+	padding-top:10px;
+}
+
+
+
+#sidebar .widget-container ul li{
+	display:block;
+	line-height:27px;
+	font-size:12px;
+}
+
+#sidebar .widget-container ul li a{
+	display:block;
+	line-height:27px;
+	color:#7b4f1f;
+}
+
+#sidebar .widget-container ul li li a{
+	line-height:24px;
+	padding-left:30px;
+}
+
+/**
+ * @section        WP Widgets
+ *
+ * We try to blend nicely with WordPress out-of-the-box widgets 
+ *
+ */
+
+.xoxo{
+	list-style-type:none;
+}
+
+
+.widget_tag_cloud{
+	padding:10px;
+}
+
+.widget_tag_cloud .widget-title{
+	color:#234;
+	line-height:30px;
+	padding:0 10px;
+	border-bottom:1px solid #9aa;
+}
+
+.widget_tag_cloud a{
+	color:#89a;
+}
+
+
+/* Calendar */
+
+.widget_calendar #calendar_wrap{
+	margin:5px;
+	border:1px solid #eee;
+	padding:5px;
+}
+
+.widget_calendar table{
+	border-collapse:collapse;
+	border:2px solid #f0f3f3;
+}
+
+.widget_calendar caption{
+	text-align:center;
+	color:#566;
+	text-transform:uppercase;
+}
+
+.widget_calendar th{
+	text-align:center;
+	font-size:10px;
+	color:#233;
+	border-bottom:2px solid #cdd;
+	border-right:1px solid #eff;
+	padding-top:6px;
+	padding-bottom:2px;
+}
+
+.widget_calendar tbody td{
+	border:1px solid #f0f0f0;
+	text-align:center;
+	border-bottom:2px solid #f0f0f0;
+}
+
+.widget_calendar tfoot td{
+	text-align:center;
+	font-style:normal;
+}
+
+/**
+ * @section        Duperrific Widgets
+ *
+ * Styles for the bundled widgets
+ *
+ */
+
+.hentry .xoxo{
+	list-style-type:none;
+	margin:0;
+}
+
+.aside .empty-widget, #sidebar .empty-widget{
+	border:1px solid #ddd;
+}
+
+#sidebar .empty-widget{
+	margin-left:0;	 
+	background:#ffe;
+}
+
+.aside .empty-widget h3{
+	font-family:"lucida grande", helvetica, arial, serif;
+	font-size:11px;
+	text-transform:uppercase;
+	margin-bottom:0;
+	color:#666;
+	padding:10px;
+	border-top:1px solid #fff;
+}
+
+.aside .empty-widget h4{
+	font-size:13px;
+	margin-bottom:9px;
+}
+
+.aside .empty-widget p{
+	color:#999;
+	margin:0;
+	padding:10px;
+}
+
+.aside .empty-widget a{
+	color:#f60;
+	color:#c53817;
+}
+
+
+
+/**
+ * @section        TweetBadgeWidget
+ *
+ * Styles for this widget
+ *
+ */
+
+.tweet_badge{
+	padding-bottom:20px;
+}
+
+.tweet_badge #twitter_div{
+	position:relative;	
+	padding-bottom:18px;
+}
+
+.tweet_badge #twitter_update_list li{
+	padding:18px;
+	border-bottom:1px solid #ddd;
+}
+
+.tweet_badge #twitter_update_list li span{
+	text-align:left;
+	font-size:20px;
+	font-style:italic;
+	line-height:24px;
+	color:#777;
+}
+
+.tweet_badge #twitter-link{
+	font-size:16px;
+	display:block;
+	position:absolute;
+	line-height:24px;
+	right:10px;
+}
+
+
+
+/*
+	Comments
+*/
+           
+#comments .comments-section-title{
+	margin-left:18px;
+}
+
+#comments .comments-section-title, #respond h3{
+	font-size:16px;
+	color:#666;   
+	margin-bottom:18px;
+	
+}
+
+
+#comments, #respond{
+	padding:20px;
+}
+
+#comments.closed{
+	border:none;
+}
+
+p.nocomments{
+	text-transform:uppercase;
+	color:#999;
+}
+
+#comments .comments-section-title, #respond h3{
+	text-transform:uppercase;
+	font-size:16px;
+}
+
+.commentlist {
+	padding: 0;
+	text-align: justify;
+}
+
+.commentlist ol{
+	list-style-type: decimal;
+}
+
+.commentlist li {
+	border-bottom:1px solid #ddd;
+	background:#fff;
+}
+
+.commentlist li.alt{
+	background:#f3f6f0;
+}
+
+.commentlist li div{
+	position:relative;
+	padding: 0px 10px;		
+}
+
+.commentlist p {
+	padding:0 10px;
+}
+
+.commentlist li .comment-author{
+	padding-top:20px;
+	font-size:14px;
+	line-height:24px;
+	margin-bottom:18px;
+}
+
+.commentlist li .comment-author cite{
+	font-weight:bold;
+}
+
+.commentlist li .comment-meta{
+	font-size:10px;
+	font-style:italic;
+	line-height:30px;	
+	position:absolute;
+	right:20px;
+	top:20px;
+}
+
+.commentlist li .comment-meta a{
+	display:inline-block;
+	color:#454545;
+}
+
+.commentlist li .comment-meta a:hover{
+	color:#930;
+}	
+
+.commentlist .comment .comment { 
+	padding-left:20px;
+	border-bottom:none;	
+	border-top:1px solid #ddd;	
+}
+
+.commentlist .comment .comment .comment { 
+	margin-left:-20px;
+	padding-left:40px;
+}
+
+.commentlist .comment .comment .comment .comment { 
+	margin-left:-40px;	
+	padding-left:60px;
+}
+
+.commentlist li.bypostauthor{
+	background-repeat:no-repeat;
+	background-position:top right;
+}
+
+
+.comment .reply{
+	text-align:right;
+	padding:0 10px;
+	position:static;
+}
+
+.comment .reply a{
+	line-height:36px;
+	font-size:10px;
+	text-transform:uppercase;
+}
+
+#comment{
+	width:544px;
+}
+
+.nocomments {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+.commentmetadata {
+	margin: 0;
+	display: block;
+}
+
+
+/*
+	Forms
+*/
+
+.text input, textarea{
+	display:block;
+	border:1px solid #aaa;
+	padding:3px;
+}

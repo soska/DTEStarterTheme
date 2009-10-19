@@ -1,0 +1,303 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: armandososa <translation@sosa.otherinbox.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+
+#. Text in echo
+#: 1one/views/elements/title.php:8
+msgid " Archive "
+msgstr "Archivo"
+
+#. Text in echo
+#: 1one/views/elements/title.php:8
+msgid " Category Archive"
+msgstr "Archivo de Categorías"
+
+#. Text in echo
+#: 1one/views/elements/title.php:8
+msgid " Daily Archive "
+msgstr "Archivo Diario"
+
+#. Text in echo
+#: 1one/views/elements/title.php:8
+msgid " Monthly Archive "
+msgstr "Archivo Mensual"
+
+#. Text in echo
+#: 1one/views/elements/title.php:8
+msgid " Tag Archive"
+msgstr "Archivo de Etiquetas"
+
+#. Text in function
+#: 1one/comments.php:18
+msgid "% Responses"
+msgstr "% Respuestas"
+
+#. Text in echo
+#: 1one/comments.php:83
+#: 1one/comments.php:90
+msgid "(required)"
+msgstr "(obligatorio)"
+
+#. Text in function
+#: 1one/app/config/widget-areas.php:1
+msgid "All Purpose Sidebar"
+msgstr "Barra Lateral General"
+
+#. Text in function
+#: 1one/app/config/widget-areas.php:1
+msgid "Archive -- Above Content"
+msgstr "Archivos -- Sobre el contenido"
+
+#. Text in function
+#: 1one/app/config/widget-areas.php:1
+msgid "Archive -- Bottom of Page"
+msgstr "Archivos -- Hasta abajo"
+
+#. Text in function
+#: 1one/app/config/widget-areas.php:1
+msgid "Archive -- Sidebar Bottom"
+msgstr "Archivos -- Debajo de la barra lateral"
+
+#. Text in function
+#: 1one/app/config/widget-areas.php:1
+msgid "Archive -- Sidebar Top"
+msgstr "Archivos -- Sobre la barra lateral"
+
+#. Text in function
+#: 1one/views/elements/post-header.php:3
+msgid "By %s"
+msgstr "Por %s"
+
+#. Text in function
+#: 1one/views/elements/page-title.php:1
+msgid "Category "
+msgstr "Categoría"
+
+#. Text in function
+#: 1one/app/config/widget-areas.php:1
+msgid "Comments -- Before Form"
+msgstr "Comentarios -- Antes del formulario"
+
+#. Text in function
+#: 1one/app/config/widget-areas.php:1
+msgid "Comments -- Before List"
+msgstr "Comentarios - Después del formulario"
+
+#. Text in echo
+#: 1one/views/elements/meta.php:16
+msgid "Comments RSS feed"
+msgstr "Feed de RSS para comentarios"
+
+#. Text in function
+#: 1one/views/entry-listed.php:5
+#: 1one/views/entry-unfeatured.php:8
+msgid "Continue reading…"
+msgstr "Continuar Leyendo"
+
+#. Text in function
+#: 1one/views/elements/page-title.php:1
+msgid "Daily Archive: <strong>%s</strong>"
+msgstr "Archivo diario <strong>%s</strong>"
+
+#. Text in function
+#: 1one/views/sidebars/default.php:5
+msgid "Drop widgets here"
+msgstr "Agrega widgets aqui"
+
+#. Text in function
+#: 1one/views/elements/post-footer.php:4
+msgid "Edit "
+msgstr "Editar"
+
+#. Text in function
+#: 1one/views/elements/page-title.php:1
+msgid "Entries tagged with "
+msgstr "Entradas etiquetadas como"
+
+#. Text in function
+#: 1one/views/elements/post-header.php:2
+msgid "F jS, Y"
+msgstr "F jS, Y"
+
+#. Text in function
+#: 1one/app/config/widget-areas.php:1
+msgid "Header"
+msgstr "Cabecera"
+
+#. Text in function
+#: 1one/app/config/widget-areas.php:1
+msgid "Home -- Area Bellow Featured Posts"
+msgstr "Inicio -- Debajo de los posts destacados"
+
+#. Text in function
+#: 1one/app/config/widget-areas.php:1
+msgid "Home -- Area Bellow Secondary Posts"
+msgstr "Inicio -- Debajo de los posts secundarios"
+
+#. Text in function
+#: 1one/app/config/widget-areas.php:1
+msgid "Home -- Bottom Of Page"
+msgstr "Inicio -- Hasta abajo"
+
+#. Text in function
+#: 1one/app/config/widget-areas.php:1
+msgid "Home -- Sidebar Bottom"
+msgstr "Inicio -- Debajo de la barra lateral"
+
+#. Text in function
+#: 1one/app/config/widget-areas.php:1
+msgid "Home -- Sidebar Top"
+msgstr "Inicio -- Sobre de la barra lateral"
+
+#. Text in function
+#: 1one/app/config/widget-areas.php:1
+msgid "Home -- Top Of Page"
+msgstr "Inicio -- Hasta arriba"
+
+#. Text in function
+#: 1one/comments.php:49
+msgid "Leave a Reply"
+msgstr "Deja una respuesta"
+
+#. Text in echo
+#: 1one/comments.php:73
+msgid "Log out &raquo;"
+msgstr "Cerrar sesión &raquo;"
+
+#. Text in echo
+#: 1one/comments.php:72
+msgid "Log out of this account"
+msgstr "Salir de esta cuenta"
+
+#. Text in function
+#: 1one/comments.php:57
+msgid "Logged In"
+msgstr "conectado"
+
+#. Text in echo
+#: 1one/comments.php:70
+msgid "Logged in as"
+msgstr "Conectado como"
+
+#. Text in echo
+#: 1one/comments.php:90
+msgid "Mail (will not be published) "
+msgstr "Correo (no será publicado)"
+
+#. Text in function
+#: 1one/views/elements/page-title.php:1
+msgid "Monthly Archive: <strong>%s</strong>"
+msgstr "Archivo Mensual: <strong>%s</strong>"
+
+#. Text in echo
+#: 1one/comments.php:83
+msgid "Name "
+msgstr "Nombre"
+
+#. Text in function
+#: 1one/comments.php:18
+msgid "No Responses"
+msgstr "No hay respuestas"
+
+#. Text in function
+#: 1one/comments.php:18
+msgid "One Response"
+msgstr "Una respuesta"
+
+#. Text in function
+#: 1one/app/config/widget-areas.php:1
+msgid "Page -- Above Content"
+msgstr "Página - Sobre el contenido"
+
+#. Text in function
+#: 1one/app/config/widget-areas.php:1
+msgid "Page -- Bottom of Page"
+msgstr "P'agina --  Hasta abajo"
+
+#. Text in function
+#: 1one/app/config/widget-areas.php:1
+msgid "Page -- Sidebar Bottom"
+msgstr "Página -- Debajo de la barra lateral"
+
+#. Text in function
+#: 1one/app/config/widget-areas.php:1
+msgid "Page -- Sidebar Top"
+msgstr "Página -- Sobre la barra lateral"
+
+#. Text in echo
+#: 1one/views/elements/post-footer.php:3
+msgid "Posted in"
+msgstr "Escrito en"
+
+#. Text in echo
+#: 1one/views/elements/meta.php:15
+msgid "Posts RSS feed"
+msgstr "Feed RSS de posts"
+
+#. Text in function
+#: 1one/comments.php:49
+msgid "Reply to %s"
+msgstr "Respuesta a %s"
+
+#. Text in function
+#: 1one/app/config/widget-areas.php:1
+msgid "Single Post -- Above Content"
+msgstr "Individual - Sobre el contenido"
+
+#. Text in function
+#: 1one/app/config/widget-areas.php:1
+msgid "Single Post -- Bottom of Page"
+msgstr "Individual -- Hasta abajo"
+
+#. Text in function
+#: 1one/app/config/widget-areas.php:1
+msgid "Single Post -- Sidebar Bottom"
+msgstr "Individual -- Debajo de la barra lateral"
+
+#. Text in function
+#: 1one/app/config/widget-areas.php:1
+msgid "Single Post -- Sidebar Top"
+msgstr "Individual -- Sobre la barra lateral"
+
+#. Text in echo
+#: 1one/comments.php:36
+msgid "Sorry. Comments are Closed"
+msgstr "Lo siento. Los comentarios están cerrados."
+
+#. Text in function
+#: 1one/views/elements/post-footer.php:2
+msgid "Tags "
+msgstr "Etiquetas"
+
+#. Text in echo
+#: 1one/comments.php:97
+msgid "Website"
+msgstr "Sitio Web"
+
+#. Text in function
+#: 1one/views/elements/page-title.php:1
+msgid "Yearly Archive: <strong>%s</strong>"
+msgstr "Archivo Anual: <strong>%s</strong>"
+
+#. Text in function
+#: 1one/comments.php:57
+msgid "You must be %s to post a comment"
+msgstr "Debes estar %s para escribir un comentario"
+
+#. Text in echo
+#: 1one/comments.php:106
+msgid "Your comment"
+msgstr "Tu comentario"
+
+#. Text in function
+#: 1one/views/sidebars/default.php:5
+msgid "turn this placeholders off"
+msgstr "Ocultar estos indicadores"
+
