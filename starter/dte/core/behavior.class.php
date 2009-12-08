@@ -17,11 +17,11 @@ class DuperrificBehavior {
 	 * @param string $blog 
 	 * @author Armando Sosa
 	 */
-	function __construct($name,$settings,&$blog){
+	function __construct($name,$settings,&$controller){
 		$this->name = $name;
 		$this->settings = set_merge($this->settings,$settings);
-		$blog->registerBehavior($this);
-		$this->init($blog);
+		$controller->registerBehavior($this);
+		$this->init($controller);
 	}
 
 	/**

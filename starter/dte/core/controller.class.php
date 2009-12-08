@@ -365,8 +365,8 @@ class DuperrificController extends Duperrific{
 	 * @return void
 	 * @author Armando Sosa
 	 */
-	function element($name,$helpers=null){
-		$this->renderFile(DUP_ELEMENTS_PATH."/$name.php");
+	function element($name,$vars = array()){
+		$this->renderFile(DUP_ELEMENTS_PATH."/$name.php",$vars);
 	}
 		
 	/**
@@ -496,29 +496,8 @@ class DuperrificController extends Duperrific{
 	 * @author Armando Sosa
 	 */
 	function getBodyClass($classes = null){
-		global $wp_query;
-		
-		$classes = (Array) $classes; //force $classes to array
-		// get all aplicable page types
-		$pageTypes = $this->getCurrentPageTypes(); 
-		$classes = array_merge($classes,$pageTypes);
-		
-		// get single class
-		if (is_single()) {
-			$postID = $wp_query->post->ID;
-			$classes[] = "id-$postID";
-		}
-		
-		// get slug or nice names from the queried object, as it applies
-		$object = $wp_query->get_queried_object();
-		if (isset($object->slug)) {
-			$classes[] = $object->slug;
-		}
-		if (isset($object->user_nicename)) {
-			$classes[] = $object->user_nicename;
-		}
-				
-		return "class=\"".implode(' ',$classes)."\"";
+		// Wordpress Added a simlar function to the core, so this is not necessary anymore				
+		body_class($classes);
 	}
 	
 	/**

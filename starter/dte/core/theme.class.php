@@ -253,8 +253,6 @@ class DuperrificThemeController extends Duperrific {
 		foreach ($this->widgets as $widget) {
 			$className = ucfirst($widget)."Widget";
 			if (class_exists($className)) {
-				// $w = new $className();
-				// $w->register();			
 				register_widget($className);
 			}
 		}
@@ -452,15 +450,15 @@ class DuperrificThemeController extends Duperrific {
 	}
 
 	
-	function style($handle,$options){
+	function style($handle,$options = null){
 		$this->dependency('style',$handle,$options);
 	}
 	
-	function script($handle,$options){
+	function script($handle,$options = null){
 		$this->dependency('script',$handle,$options);
 	}
 	
-	function dependency($type,$handle,$options){
+	function dependency($type,$handle,$options = array()){
 		$subdir = ($type == 'style')?'/styles/':'/js/';
 		$options = set_merge(array(
 				'src'=>false,

@@ -80,6 +80,8 @@ class SimpleMetaBoxComponent extends DuperrificComponent{
 				'size'=>25,
 				'cols'=>40,
 				'selectNone'=>'None',
+				'beforeRender'=>'',
+				'beforeSave'=>'',
 			),$settings);		
 	}
 		
@@ -134,10 +136,14 @@ class SimpleMetaBoxComponent extends DuperrificComponent{
 		extract($settings);
 		
 		// labels looks ugly on normal context, so we use h5's instead
-		if($label) echo $html->tag('h5').$label.$html->tag('/h5');
+		if($label) echo $html->entag($label,'h5');
 
 		// a jQuery snippet that hides this from the custom fields, a bit ugly, but it works
-		echo "<script type=\"text/javascript\" charset=\"utf-8\">jQuery(function(){jQuery('input[value=$field]').parents('tr').remove();})</script>";
+		$this->__hideFieldFromInterface($field);
+
+		if (!empty($settings['beforeRender'])  && is_callable($settings['beforeRender']) ) {
+			$data = call_user_func_array($settings['beforeRender'],array($id,$settings,$this));
+		}	
 
 		switch($type){
 			
@@ -147,17 +153,19 @@ class SimpleMetaBoxComponent extends DuperrificComponent{
 			case 'image':
 				echo $this->imageBox($id,$settings);
 			break;
+
 			case 'text':
 				$attributes = $html->attr(array(
 						'type'=>'text',
 						'name'=>$field,
 						'value'=>$value,
-						'size'=>$size,				
+						'size'=>$size,										
 					)
 				);
 				echo $html->tag("input/#$field",$attributes);
 				if (!empty($hint)) echo $html->tag('p').$hint.$html->tag('/p');
 			break;
+
 			case 'textarea':
 				$attributes = $html->attr(array(
 						'name'=>$field,		
@@ -168,9 +176,21 @@ class SimpleMetaBoxComponent extends DuperrificComponent{
 				);
 				echo $html->tag("textarea#$field",$attributes,null,null).trim($value).$html->tag('/textarea');
 				if (!empty($hint)) echo $html->tag('p').$hint.$html->tag('/p');
-			break;
+			break;			
+			default:
+			// if the type is a function, just let it go.
+			if (is_callable($type)) {
+				$data = call_user_func_array($type,array($id,$settings,$this,$html));
+			}		
 		}
 		
+	}
+	
+	function __hideFieldFromInterface($field){
+		$fields = (array) $field;
+		foreach ($fields as $field) {
+			echo "<script type=\"text/javascript\" charset=\"utf-8\">jQuery(function(){jQuery('input[value=$field]').parents('tr').remove();})</script>";			
+		}
 	}
 	
 	function imageBox($id,$settings,$ajax = false){
@@ -275,18 +295,33 @@ class SimpleMetaBoxComponent extends DuperrificComponent{
 					} else {  
 						if ( !current_user_can( 'edit_post', $postId ))  
 					return $postId;  
-				}  
-				$data = $_POST[$key];  
-				$meta = get_post_meta($postId,$key);
-				if(empty($data)){
-					delete_post_meta($postId,$key,$data,$settings['unique']);
-				}elseif (empty($meta)) {
-					add_post_meta($postId,$key,$data,$settings['unique']);
-				}elseif($data != $meta){
-					update_post_meta($postId,$key,$data);
+				} 
+				
+				$data = $_POST[$key];  				
+				// let's make available a callback for the developer
+				if (!empty($settings['beforeSave'])  && is_callable($settings['beforeSave']) ) {
+					$data = call_user_func_array($settings['beforeSave'],array($data,$key,$postId,$this));
 				}
+				 
+				$this->updateField($postId,$key,$data,$settings['unique']);
+
 			}// if isset $_POST[$key]
  		}// foreach
+	}
+
+	function updateField($postId,$key,$data = '',$unique = true){
+		$meta = get_post_meta($postId,$key);
+
+		if(empty($data)){
+			// if no data, we delete the custom field
+			delete_post_meta($postId,$key,$data,$unique);
+		}elseif (empty($meta)) {
+			// no previous existence of the custom field, so we create it
+			add_post_meta($postId,$key,$data,$unique);
+		}elseif($data != $meta){
+			// update an existing custom field
+			update_post_meta($postId,$key,$data);
+		}		
 	}
 
 	function ajaxSetup(){

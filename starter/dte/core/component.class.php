@@ -16,8 +16,8 @@ class DuperrificComponent extends Duperrific{
 	 * @param string $blog 
 	 * @author Armando Sosa
 	 */
-	function __construct($settings,&$blog){
-		$this->settings = $settings;		
+	function __construct($settings,&$controller){
+		$this->settings = set_merge($this->settings,$settings);
 	}
 
 	/**
