@@ -48,6 +48,8 @@ class WidgetHelper
 						'options'=>array(),
 						'multiple'=>false,
 						'attrs'=>'',
+						'show_all_cats'=>__('-- All'),
+						'show_none_cats'=>'',
 					),(Array) $options
 			);		
 
@@ -63,7 +65,9 @@ class WidgetHelper
 			case 'select':
 				$input = $this->_select($name,$options);
 				break;
-			
+			case 'categorySelect':	
+				$input = $this->_categorySelect($name,$options);
+				break;
 			default:
 				if (is_array($options['attrs']) && !empty($options['attrs'])) {
 					$options['attrs'] = HtmlHelper::attr($options['attrs']);
@@ -111,6 +115,19 @@ class WidgetHelper
 		}
 		
 		return sprintf($this->inputTags['select'],$optionFields,$selectAtts);		
+	}
+	
+	function _categorySelect($name,$options){
+		$select = array(
+				'show_option_all'=>$options['show_all_cats'],
+				'show_option_none'=>$options['show_none_cats'],
+				'hide_empty'=>0,
+				'echo'=>0,
+				'name'=>$name,
+				'selected'=>$options['value'],
+				'class'=>'',
+			);
+		return wp_dropdown_categories( $select );	
 	}
 
 }

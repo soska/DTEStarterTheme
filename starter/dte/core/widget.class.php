@@ -84,7 +84,7 @@ class DuperrificWidget extends Wp_Widget{
 	 * @author Armando Sosa
 	 */
 	function DuperrificWidget(){
-		$this->__cosntruct();
+		$this->__construct();
 	}
 	
 	/**
@@ -94,7 +94,7 @@ class DuperrificWidget extends Wp_Widget{
 	 * @author Armando Sosa
 	 */
 	function initOptions($instance){
-			$this->options = set_merge($this->options,$instance);		
+		$this->options = set_merge($this->options,$instance);				
 	}
 	
 	function resetOptions(){
