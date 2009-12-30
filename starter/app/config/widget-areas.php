@@ -1,4 +1,11 @@
 <?php
+/**
+ * This file is called before initializing widget areas from the ThemeController class
+ * All this could have been initialized in app/theme.php, tight on the class declaration, 
+ * but that way we won't have i10n support for this strings. 
+ *
+ * @author Armando Sosa
+ */
 // important: whithout this line, admin stuff won;t be translated
 $this->blog->localize();
 

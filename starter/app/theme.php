@@ -2,7 +2,9 @@
 /**
 *  Theme Class
 *  
-*  Whatever customization needs to be made, made it here
+*  The ThemeController controls and configures the features present on the theme, like 
+*  bundled widgets, widget areas, control panel, theme options, etc.
+*  
 *  
 */
 class ThemeController extends DuperrificThemeController{
@@ -36,7 +38,10 @@ class ThemeController extends DuperrificThemeController{
 		);
 	
    /**
-    * the settings panels for the admin area, the key of the name corresponds to a method 
+    * Here, we declare setting panels.
+    *
+    * There's a lot of magic going on here. DTE will add a panel for you under 'Appareance' for you with this settings.
+	* the key 'generalOptions' refers to a method on the Theme class, you'll find it bellow.
     *
     * @var string
     */
@@ -77,7 +82,10 @@ class ThemeController extends DuperrificThemeController{
 	}
 	              
 	/**
-	 * This is hooked to the WP "init" hook
+	 * This nethod is hooked to the WP "init" hook
+	 *
+	 * DTE tries to save you a lot of the hassle of hooking stuff up with this convenience methods.
+	 * Great for setting thigns up.
 	 *
 	 * @return void
 	 * @author Armando Sosa
@@ -85,13 +93,9 @@ class ThemeController extends DuperrificThemeController{
 	function onInit(){
 
 		if (!is_admin()) {
-			// skin style
-			$skin=$this->blog->getOption('general','skin');
-			if (!empty($skin)){
-				$this->style("$skin-skin",array('src'=>"skins/$skin/style.css"));
-			}		
 
-			// ie styles
+			// The method style is a convenience wrapper to wp_enqueue style that makes easier to add aditional stylesheets to your theme
+			// here, we'll use it to display ie6 and ie7 exclusive css, by using conditional comments
 			$this->style('dup-ie6',array('src'=>'ie6.css','conditions'=>'IE 6'));
 			$this->style('dup-ie7',array('src'=>'ie6.css','conditions'=>'IE 7'));
 
@@ -105,11 +109,19 @@ class ThemeController extends DuperrificThemeController{
 	/**
 	 * General Options Panel    
 	 *
+	 * This is the function for the panel we've declared above.
+	 *
+	 * Again, a lot of stuff happens behind the scenes, everything we'll do here is include a panel
+	 * using the includePanel() function. This is only a convenience method to include a view located on the
+	 * views/panels/ folder.
+	 *
+	 * Don't worry about saving stuff, DTE will take care of it by itself. 
+	 *
 	 * @return void
 	 * @author Armando Sosa
 	 */
 	function generalOptions(){
-		$this->includePanel('general',compact('skins'));
+		$this->includePanel('general');
 	}
 	
 	

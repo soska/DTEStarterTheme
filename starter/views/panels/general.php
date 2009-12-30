@@ -1,25 +1,38 @@
+<?php
+/**
+ * This is a settings panel view that will be called from the generalOptions() method over app/theme.php class
+ * 
+ * DTE takes very seriously User Experience so we've gone a long way to make sure that this panel looks a lot like 
+ * WordPress' bundled setting pages with the minumum effort.
+ * 
+ * So, instead of writing all the necessary HTML by hand, we'll use the handy $options helper. 
+ * 
+ * @author Armando Sosa
+ */
+?>
+
 <div class="duperrific wrap">
 
 <?php 		
+	// This is the title of the page.
 	echo $options->title('General Settings',$this->theme->name."-general");
 
-	// to show ewhen settings has been updated
+	// the $options->flash() method will show a message at the top of the screen…
+	// …to show ewhen settings has been updated
 	echo $options->flash('Your settings has been updated <a href="'.get_option('home').'">go check it out &raquo;</a>');
-
-	// when settings has been restored
+	// …when settings has been restored
 	echo $options->flash('Your settings has been restored to default. Now you can start tweaking again ','restored');
-
-	// when widgets has been reseted
+	// …when widgets has been reseted
 	echo $options->flash('Your blog widgets has been reseted','reseted');
 
+
+	// here, we intialize the form
 	echo $options->form('general','save');
 	echo $options->context($this->theme->name);
 	
-
-
-
+	// We'll divide the form into sections, like WP does
 	echo $options->section(__('Widget Areas'));
-	
+	// This will output a beautiful control linked to the 'show_sidebar_placeholders' options declared over on app/theme.php
 	echo $options->input('show_sidebar_placeholders',array(
 						'label'=>__('Show place-holders for widgetized areas'),
 						'description'=>'If set to yes, logged users will see a place-holder box for each widgetized area',

@@ -1,10 +1,35 @@
 <?php
+/**
+ * Controller class
+ *
+ * You can extend the Controller class here, all this methods will be available trough 
+ * the $blog global variable.
+ * 
+ * @package default
+ * @author Armando Sosa
+ */
 class Controller extends DuperrificController{
 	
+	/**
+	 * This method is called right after the Controller ahs been initialized,
+	 * it's a good opportunity for setting things up.
+	 *
+	 * @return void
+	 * @author Armando Sosa
+	 */
 	function setup(){
 		$this->localize();
 	}
 	
+	/**
+	 * This is a utility function meant to be used within the loop.
+	 *
+	 *
+	 * @param string $more_link_text 
+	 * @param string $stripteaser 
+	 * @return void
+	 * @author Armando Sosa
+	 */
 	function maybeTheExcerpt($more_link_text = null, $stripteaser = 0){
 		global $post;
 		
